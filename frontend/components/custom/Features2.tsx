@@ -5,7 +5,7 @@ const Features2 = () => {
   return (
     <div className="bg-img2 pt-10 md:p-20 md:pl-40 pl-10">
       <p className="md:text-6xl text-4xl ">
-        Enhance your team's productivity. <br />
+        Enhance your team&apos;s productivity. <br />
         Collaborate in real-time.
       </p>
 

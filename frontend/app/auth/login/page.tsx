@@ -57,7 +57,7 @@ const passwordSchema = z
     confirmPassword: z.string(),
   })
   .refine((data) => data.password === data.confirmPassword, {
-    message: "Passwords don't match",
+    message: "Passwords don&apos;t match",
     path: ["confirmPassword"],
   });
 
@@ -172,7 +172,7 @@ export default function LoginPage() {
     try {
       setIsLoading(true);
 
-      const response = await axios.post(
+      await axios.post(
         `${process.env.NEXT_PUBLIC_API_URI}/users/verifyotp`,
         {
           email: resetEmail, // Using the stored email
@@ -215,7 +215,7 @@ export default function LoginPage() {
       // Get the email from the previous step (you might want to store this in state or context)
       const email = emailForm.getValues("email");
 
-      const response = await axios.post(
+      await axios.post(
         `${process.env.NEXT_PUBLIC_API_URI}/users/resetPassword`,
         {
           email: email,
@@ -324,7 +324,7 @@ export default function LoginPage() {
             <span className="w-full border-t" />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="px-2">Don't have Account</span>
+            <span className="px-2">Don&apos;t have Account</span>
           </div>
         </div>
 
