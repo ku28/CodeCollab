@@ -57,7 +57,7 @@ export default function SignupPage() {
     setIsLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:4000/users/signup", {
+      const response = await axios.post("https://codecollab-backend-1.up.railway.app/users/signup", {
         name: values.name,
         email: values.email,
         password: values.password,

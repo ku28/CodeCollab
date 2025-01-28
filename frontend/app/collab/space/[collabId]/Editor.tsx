@@ -19,7 +19,7 @@ export default function CodeEditor({
     monacoRef.current = monaco;
 
     const completion = registerCompletion(monaco, editor, {
-      endpoint: "http://localhost:4000/complete",
+      endpoint: process.env.NEXT_PUBLIC_API_URI || "http://localhost:4000/complete",
       language: lang,
       trigger: "onDemand",
     });
@@ -37,7 +37,7 @@ export default function CodeEditor({
     });
 
     registerCompletion(monaco, editor, {
-      endpoint: "http://localhost:4000/complete",
+      endpoint: process.env.NEXT_PUBLIC_API_URI || "http://localhost:4000/complete",
       language: lang,
     });
   }
@@ -46,7 +46,7 @@ export default function CodeEditor({
     if (editorRef.current && monacoRef.current) {
       console.log("Sending Request for lang" + lang);
       registerCompletion(monacoRef.current, editorRef.current, {
-        endpoint: "http://localhost:4000/complete",
+        endpoint: process.env.NEXT_PUBLIC_API_URI || "http://localhost:4000/complete",
         language: lang,
       });
     }
