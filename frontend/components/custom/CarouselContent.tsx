@@ -8,27 +8,27 @@ import Image from "next/image";
 import { Card, CardContent } from "../ui/card";
 const carouselContent = [
   {
-    imgSrc: "/client_1.jpeg",
+    imgSrc: "/clients.png",
     description: (
       <>
         ”This product has completely <br /> transformed how I manage my <br />
         projects and deadlines.”
       </>
     ),
-    name: "Divyansh Juneja ",
-    position: "Assistant Director, URA",
+    name: "Client1",
+    position: "Designer",
   },
-  // {
-  //   imgSrc: `/carousel/p2.jpg`,
-  //   description: (
-  //     <>
-  //       ”A game-changer for our team, <br /> boosting productivity and <br />
-  //       collaboration.”
-  //     </>
-  //   ),
-  //   name: "Albert Saffron",
-  //   position: "Founder",
-  // },
+  {
+    imgSrc: `/clients.png`,
+    description: (
+      <>
+        ”A game-changer for our team, <br /> boosting productivity and <br />
+        collaboration.”
+      </>
+    ),
+    name: "Client2",
+    position: "Founder",
+  },
   // {
   //   imgSrc: "/carousel/p3.jpg",
   //   description: (
