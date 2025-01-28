@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { anime } from 'react-anime'
+// import { anime } from 'react-anime'
 import { ny } from '@/lib/utils'
 
 interface WavyDotPatternProps {
@@ -23,25 +23,25 @@ export function WavyDotPattern({
    const handleDotClick = (e: any, width: number, height: number) => {
       setDotClickDisabled(true)
 
-      anime({
-         targets: '.dot-point',
-         scale: [
-            { value: 1.35, easing: 'easeOutSine', duration: 250 },
-            { value: 1, easing: 'easeInOutQuad', duration: 500 },
-         ],
-         translateY: [
-            { value: -15, easing: 'easeOutSine', duration: 250 },
-            { value: 1, easing: 'easeInOutQuad', duration: 500 },
-         ],
-         opacity: [
-            { value: 0.7, easing: 'easeOutSine', duration: 250 },
-            { value: 0.35, easing: 'easeInOutQuad', duration: 500 },
-         ],
-         delay: anime.stagger(100, {
-            grid: [width, height],
-            from: e.target.dataset.index,
-         }),
-      })
+      // anime({
+      //    targets: '.dot-point',
+      //    scale: [
+      //       { value: 1.35, easing: 'easeOutSine', duration: 250 },
+      //       { value: 1, easing: 'easeInOutQuad', duration: 500 },
+      //    ],
+      //    translateY: [
+      //       { value: -15, easing: 'easeOutSine', duration: 250 },
+      //       { value: 1, easing: 'easeInOutQuad', duration: 500 },
+      //    ],
+      //    opacity: [
+      //       { value: 0.7, easing: 'easeOutSine', duration: 250 },
+      //       { value: 0.35, easing: 'easeInOutQuad', duration: 500 },
+      //    ],
+      //    delay: anime.stagger(100, {
+      //       grid: [width, height],
+      //       from: e.target.dataset.index,
+      //    }),
+      // })
 
       setTimeout(() => setDotClickDisabled(false), 2000)
    }
